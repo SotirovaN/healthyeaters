@@ -1,0 +1,428 @@
+{% extends 'nav.html' %}
+{% block content %}
+<style>
+    .headerContainer{
+        width: 70%;
+        height: 500px;
+        background-color: #ffa50080;
+        margin: auto;
+        border-radius: 30px;
+        display: flex;
+    }
+    .textContainer{
+        padding-top: 150px;
+        padding-left: 60px;
+        width: 30%;
+    }
+    .pictureContainer{
+        background: url("https://freepngimg.com/thumb/food/139184-food-plate-healthy-free-photo.png");
+        width: 500px;
+        height: 500px;
+        background-size: cover;
+        margin-left: 300px;
+    }
+    .aboutImage{
+        background: url("../data/aboutus.png");
+        background-size: cover;
+        width: 33%;
+        height: 350px;
+    margin-top: 137px;
+    margin-left: 200px;
+    background-size: cover;
+        
+       
+    }
+    .AboutText{
+        text-align: center;
+    margin: auto;
+   
+    }
+
+    :root{
+  --cr1:#F36E45;
+  --cr2:#fff;
+  --cr3:#000000da;
+  --cr4:#000000a1;
+  --cr5:#BEB4B1;
+  --fs1:34px;
+  --fs2:24px;
+  --fs3:20px;
+  --fs4:16px;
+  --fs5:14px;
+}
+body {
+  background: #e5e5e5;
+}
+/* the same attribute */
+.cr1{
+  color: var(--cr1);
+}
+.c2{
+  color:  var(--cr2);
+}
+.cr3{
+  color:  var(--cr3);
+}
+.cr4{
+  color:  var(--cr4);
+}
+.cr5{
+  color:  var(--cr5);
+}
+.fs1{
+  font-size: 34px;
+}
+.fs2{
+  font-size: 24px;
+}
+.fs3{
+  font-size: 20px;
+}
+.fs4{
+  font-size: 16px;
+}
+.fs5{
+  font-size: 14px;
+}
+/* end the same attribute */
+@font-face {
+  src: url(ProductSansRegular_0.ttf);
+  font-family: product;
+}
+/* *{padding: 0px;margin: 0px;box-sizing: border-box;font-family: segoe ui}
+body,html{width:100%;height:100%;}
+[class*="container"]{
+  max-width: 1170px !important;
+} */
+
+.bg-product{
+  /* SET Height cho nó rồi bảo sao ko lỗi? */
+  /*height: 446px;*/
+  background: #f7f7f7;
+  /* overflow: hidden; */
+}
+#sliderproduct{
+  width: 100%;
+}
+#sliderproduct .carousel-inner {
+  overflow: visible;
+}
+
+#sliderproduct .col-sm-6.image {
+  background: #fff;
+  box-shadow: 0px 4px 8px 0px #959595;
+  position: relative;
+  /* Thêm cái của nợ này vào bảo sao nó ko tràn bờ đê */
+  /*top: -44px;
+  padding: 100px;
+  padding-top: 40px;*/
+}
+.item {
+  padding: 20px 20px 40px 20px;
+}
+.col-sm-6.image h1 {
+  margin-bottom: 20px;
+}
+
+
+#sliderproduct .top a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 14px 22px;
+  background: #343a40;
+  box-sizing: border-box !important;
+  text-align: center;
+  margin: 0px 2px;
+  display: block;
+  color: #fff;
+  width: 96px;
+}
+
+#sliderproduct .col-sm-4.mr-auto {
+  margin-top: 22px;
+}
+
+
+#sliderproduct p.cr1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+#sliderproduct .col-sm-6:last-child {
+  /* Cần nâng cao thêm kiến thức về sử dụng padding */
+  padding-top: 146px;
+  padding-bottom: 27px;
+}
+#sliderproduct .details p.d-inline-block {
+  color: #f4c774;
+}
+
+#sliderproduct .details .fa {
+  color: #f4c774;
+  padding: 0px 3px;
+}
+
+#sliderproduct .rating {
+  margin: 23px 0px;
+}
+
+#sliderproduct .details .btn {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 16px 22px;
+  background: #f4c774;
+  color: #fff;
+  border-radius: 81px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+#sliderproduct .details h2 {
+  margin: 25px 0px 30px 0px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#sliderproduct .details p.cr4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 0px;
+}
+#sliderproduct .carousel-item{
+  transition: 0.4s;
+}
+
+
+#sliderproduct a.carousel-control-prev, #sliderproduct a.carousel-control-next {
+  border-radius: 50%;
+  background-color: #f4c774;
+  width: 46px;
+  height: 46px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%,-60%);
+}
+
+.bg {
+  height: 570px;
+  overflow: hidden;
+}
+
+#sliderproduct ol.carousel-indicators {
+  display: none;
+}
+
+
+</style>
+<div class="headerContainer">
+    <div class="textContainer">
+        <h1><b>Fresh & tasty salads</b></h1>
+        <p>Always fresh, made with love and passion, with every nutrition you need and deserve.</p>
+        <a href="#menu" type="button" class="btn btn-dark">Discover menu</a>
+    </div>
+    <div class="pictureContainer">
+        
+    </div>
+</div>
+<div class="container w-100 align-top" id="menu" style="padding-bottom: 100px;">
+
+<div class="row w-100">
+    <div class="col-md-3 d-inline-block mt-3 justify-content-center align-top">
+        <div>
+        <h4 class=" mt-5 ms-5 fw-bold " style="color:black "><i>filter by</i></h4>
+
+        <div style="background-color: #ffa50080;" class="text-light rounded shadow m-4 text-center p-3">
+            <h4 class="mb-3" style="color: black">Restaurants:</h4>
+            {% for a in authors %}
+
+                <h5 class="mb-3 "><a class="text-decoration-none text-dark"  href="{% url 'filter_foods' %}?author={{ a.id }}"> {{ a.name }} </a></h5>
+
+            {% endfor %}
+        </div>
+        <div style="background-color: whitesmoke"  class="text-dark  align-items-center justify-content-center rounded shadow-lg m-4 text-center p-3">
+            <h4 class="mb-3">Categories:</h4>
+            {% for c in categories %}
+
+                <h5 class="mb-3">  <a class="text-decoration-none text-dark"  href="{% url 'filter_foods' %}?category={{ c.id }}">{{ c.name }} </a></h5>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    </div>
+
+    <div class="d-inline-block col-md-9 mt-5">
+       <form action="{% url 'search_foods' %}" method="GET" class="row mb-3">
+        <div class="col-6 offset-md-2">
+ <input type="text" name="search_term" class="form-control p-2 search" value="{{ search_term }}" placeholder="Search by title">
+        </div>
+        <div class="col-3">
+            <button type="submit" class="btn p-2 text-light" style="background-color: #ffa50080;">Search</button>
+        </div>
+    </form>
+        {% for b in foods %}
+            <div class="card d-inline-block shadow-lg m-3 p-2" style="width: 17.5rem;">
+            <div style="height: 4rem" class="align-center text-center" >
+                <h5 class="card-title align-self-center text-center fw-bold m-3">{{ b.title }}</h5>
+                </div>
+                <img src="{{ MEDIA_URL }}{{ b.image.url }}" class="card-img-top" width="100%" height="305rem" alt="...">
+                  <div class="card-body">
+                    <h6>Restaurant: <span>{{ b.owner.name }}</span></h6>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="width: 23%;">
+                        <a href="{% url 'food_details' b.id %}" class="btn text-light  ms-3 mb-3 " style="background-color:black">Details</a>
+                        </div>
+                <div class="d-inline-block justify-content-end col-6">
+                <h3 class="fw-bold ms-5 d-inline-block w-auto ">{{ b.price }}MKD</h3>
+                </div>
+                       {% if user.is_authenticated and user.role == 'c' %}
+                          <div class="justify-content-end d-flex">
+                          <form method="POST" action="{% url 'add' b.id %}">
+                        {% csrf_token %}
+                       <button class="btn btn-lg text-light" style="background-color: #00563FFF" type="submit" value="add_to_cart" name="action">
+                            <i class="bi bi-cart-fill"></i>  Add to cart
+                        </button>
+                            </form>
+                          </div>
+                     {% endif %}
+
+
+</div>
+            </div>
+
+
+        {% endfor %}
+
+        {% if user.is_authenticated and user.role == 'r' %}
+        <div class="col-3" style="width: 70%;margin: auto;text-align: center;">
+            <a href="{% url 'add_food' %}"> <button type="submit" class="btn btn-lg btn-dark p-3 m-1 " style="width: 80%;" >ADD FOOD</button></a>
+        </div>
+    {% endif %}
+
+    </div>
+</div>
+</div>
+
+<div class="bg mt-5" style="height: 715px;">
+    <div class="bg-product mt-5" style="height: 670px;">
+      <div class="container product">
+        <div class="row">
+          <div id="sliderproduct" class="carousel slide " data-ride="carousel" data-interval="10000">
+            <ol class="carousel-indicators">
+              <li data-target="#sliderproduct" data-slide-to="0" class="active"></li>
+              <li data-target="#sliderproduct" data-slide-to="1"></li>
+              <li data-target="#sliderproduct" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox" data-interval="10000000">
+              <div class="carousel-item active">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-sm-6 image">
+                      <div class="item">
+                        <h1 style="font-style: italic;">Deal of the day</h1>
+                        <img class="img-fluid" src="https://bostonglobe-prod.cdn.arcpublishing.com/resizer/SpLQRChGZ9SzmVmA2i5FmcEaqIg=/420x0/arc-anglerfish-arc2-prod-bostonglobe.s3.amazonaws.com/public/OPOEXKDJIII6NKSPV5RT5K2Y7I.JPG" alt="" >
+                      </div><!--enditem-->
+                    </div><!--endcol-->
+                    <div class="col-sm-6">
+                      <div class="top d-flex justify-content-center" id="demo">
+                        
+                      </div><!--endtop-->
+                      <div class="details">
+                        <h2 class="cr3">GREEN VEGAN AVOCADO BURGER</h2>
+                        <p class="cr4">whole-grain bun with fresh lettuce, tomatoes,<br> cucumber, and red onions ….</p>
+                        <div class="rating">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div><!--endrating-->
+                        <p class="cr1"><b style="color: black;"><s>600 MKD</s></b> <b style="color: green;">450 MKD</b></s></p>
+                        <a href="{% url 'food_details' 8 %}" class="btn text-light  ms-3 mb-3 " style="background-color:#343a40">Details</a>
+                  </div><!--enddetails-->
+                </div><!--endcol-->
+              </div><!--endrow-->
+            </div><!--endcontainer-->
+          </div><!--endcarousel-item-->
+         
+      
+    </div><!--endslidesliderproduct-->
+  </div><!--endrow-->
+  </div><!--endcontainer-->
+  </div><!--endbg-product-->
+  </div>
+  </div>
+  
+  
+
+<div class="AboutUs" id="about"  style="background-color: #f7f7f7; width: 100%; height: 600px;display: flex;">
+    <div class="aboutImage"></div>
+    <div class="AboutText" style="width: 30%; text-align: center; margin: auto;">
+<h1 style="font-style:oblique">About Us</h1>
+<p>We offer premium, organic ingredients, and recipes for almost every lifestyle to help with your healthy lifestyle without losing your favorite flavors – that’s why we’re the #1 Meal Kit for Eating Well.</p>
+    </div>
+
+</div>
+<section class="" >
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: lightgrey;">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3"></span>
+            
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: lightgray; color: black;" >
+        © 2023 Copyright
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jul 20, 2023 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = "<a>"+days + "<br>days</a><a>" + hours + "<br>hours</a><a>"
+      + minutes + "<br>min</a><a>" + seconds + "<br>sec</a>";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+{% endblock %}
